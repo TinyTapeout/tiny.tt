@@ -1,0 +1,39 @@
+{
+  "name": "tiny.tt",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "validate": "node scripts/validate.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run validate && npm run format:check && npm run lint && npm run typecheck",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,js,mjs}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,jsonc,md,yml,yaml}": [
+      "prettier --write"
+    ],
+    "_redirects": [
+      "node scripts/validate.mjs"
+    ]
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260416.0",
+    "eslint": "^10.2.0",
+    "globals": "^17.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.0",
+    "typescript": "^6.0.0",
+    "typescript-eslint": "^8.58.0",
+    "wrangler": "^4.83.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tiny-tt-links",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-15",
+
+  // Parses + validates _redirects and emits src/_redirects.generated.ts.
+  // Runs before bundling, so a malformed _redirects fails the deploy.
+  "build": {
+    "command": "node scripts/validate.mjs",
+  },
+
+  // Click events stream here. Free tier is generous.
+  "analytics_engine_datasets": [{ "binding": "CLICKS", "dataset": "tiny_tt_clicks" }],
+
+  "observability": { "enabled": true },
+}

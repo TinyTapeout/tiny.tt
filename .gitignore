@@ -1,0 +1,12 @@
+node_modules
+.wrangler
+.dev.vars
+.env
+.env.*
+!.env.example
+dist
+*.log
+.DS_Store
+
+# Generated from _redirects by scripts/validate.mjs
+src/_redirects.generated.ts

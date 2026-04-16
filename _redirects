@@ -1,0 +1,19 @@
+# tiny.tt: short link redirects for Tiny Tapeout
+#
+# Standard Cloudflare Pages / Netlify _redirects format:
+#   <source>  <destination>  [status]
+#
+# Status defaults to 302 if omitted. Use 301 for permanent.
+# Lines starting with `#` are comments; blank lines are ignored.
+#
+# Add a link by editing this file and opening a PR.
+#
+# Reserved paths (cannot be used as slugs):
+#   /_dashboard, /_dashboard/api/stats, /robots.txt, /favicon.ico
+#
+# The `/*` catchall at the bottom is required: it handles the bare domain
+# (tiny.tt/) and any unknown slug.
+
+/gh        https://github.com/TinyTapeout     302
+
+/*         https://tinytapeout.com/           302
