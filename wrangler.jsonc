@@ -4,6 +4,8 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-04-15",
 
+  "keep_vars": true,
+
   // Parses + validates _redirects and emits src/_redirects.generated.ts.
   // Runs before bundling, so a malformed _redirects fails the deploy.
   "build": {
